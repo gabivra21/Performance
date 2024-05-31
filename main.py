@@ -36,7 +36,7 @@ def mapeamento_direto(tamanho_cache:int, pos_memoria:list[int]):
     hits, misses, mem_acess, tx_hits = 0, 0, 0, 0
     for posicao in pos_memoria:
         print("Posição desejada:",posicao)
-        if posicao > tamanho_cache:
+        if posicao >= tamanho_cache:
             pos_cache = posicao % tamanho_cache
             if validar_miss_hit(cache[pos_cache], posicao):
                 cache[pos_cache] = posicao
@@ -58,7 +58,7 @@ def mapeamento_direto(tamanho_cache:int, pos_memoria:list[int]):
     print("Taxa de Hits:", f"{((tx_hits*100)/len(pos_memoria)/100):.2%}")
 
 
-mapeamento_direto(10, [3,15,7,33,7,126,1])
+mapeamento_direto(5, [33,3,11,5])
             
         
 

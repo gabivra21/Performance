@@ -8,9 +8,9 @@ def inicializar_cache(tamanho_cache: int):
 
 def imprimir_cache(cache:dict[int,int], opcional=None):
     if opcional is not None:
-        print("Pos Cache|Pod Memória","---->",opcional)
+        print("Pos Cache|Pos Memória","---->",opcional)
     else:
-        print("Pos Cache|Pod Memória")
+        print("Pos Cache|Pos Memória")
     for posicao, end_mem in cache.items():
         print(6*' ',posicao,"|  ",end_mem)
 
@@ -58,7 +58,7 @@ def mapeamento_direto(tamanho_cache:int, pos_memoria:list[int]):
     print("Taxa de Hits:", f"{((tx_hits*100)/len(pos_memoria)/100):.2%}")
 
 
-mapeamento_direto(5, [33,3,11,5])
+mapeamento_direto(5, [33,3,11,3,5,5])
             
         
 
